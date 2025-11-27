@@ -21,9 +21,6 @@
     .header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:transparent}
     .nav{display:flex;gap:18px;align-items:center}
     .nav a{color:var(--muted);text-decoration:none;font-weight:600}
-    .auth{display:flex;gap:8px}
-    .btn{padding:8px 14px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);background:var(--card);cursor:pointer}
-    .btn.primary{background:linear-gradient(180deg,var(--accent),var(--accent-2));color:white;border:0}
 
     /* Hero */
     .hero{max-width:1100px;margin:22px auto;padding:34px;background:linear-gradient(180deg,#eaf3ff 0%, #f6fbff 100%);border-radius:26px;display:flex;gap:20px;align-items:center}
@@ -91,10 +88,7 @@
       <a href="#">Home</a>
       <a href="#">Search</a>
       <a href="#">Message</a>
-      <div class="auth">
-        <button class="btn">Log in</button>
-        <button class="btn primary">Sign up</button>
-      </div>
+      <!-- tombol Log in & Sign up dihapus -->
     </nav>
   </header>
 
@@ -105,7 +99,6 @@
       <a href="#docs" class="cta">Lihat Dokumentasi</a>
     </div>
     <div class="hero-right">
-      <!-- Ganti gambar hero sesuai keinginan.  -->
       <img class="hero-img" src="https://pin.it/J8wbQbxlR" alt="hero" />
     </div>
   </section>
@@ -118,7 +111,6 @@
 
         <div class="slider" aria-hidden="false">
           <div class="slides" id="slides" style="width:300%">
-            <!-- Ganti src gambar sesuai file yang kamu upload di server lokal. -->
             <img src="/mnt/data/sample1.jpg" alt="doc1" />
             <img src="/mnt/data/sample2.jpg" alt="doc2" />
             <img src="/mnt/data/sample3.jpg" alt="doc3" />
@@ -208,7 +200,6 @@
   </footer>
 
   <script>
-    // Simple slider script
     (function(){
       const slides = document.getElementById('slides');
       const thumbs = document.getElementById('thumbs');
@@ -235,7 +226,6 @@
         update();
       });
 
-      // Initialize: if images not full width, ensure slides width adapts
       function resize(){ slides.style.width = (total * 100) + '%'; slides.querySelectorAll('img').forEach(i=>i.style.width = (100/total) + '%'); }
       window.addEventListener('load',resize);
       window.addEventListener('resize',resize);
